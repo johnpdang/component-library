@@ -25,7 +25,7 @@ use:
 
 ### Compiling
 
-/themes/buck/
+/themes/component-library/
 \$ webpack --watch
 
 ### Installing
