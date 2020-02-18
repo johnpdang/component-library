@@ -1,0 +1,125 @@
+.accordion__wrapper {
+  .accordion-card {
+    h5 {
+      margin-bottom: 0;
+    }
+    button {
+      background-color: transparent;
+      color: $c_primary;
+      padding: 1rem 0;
+    }
+  }
+}
+
+  /* ============================================================
+accordion
+outdated design
+============================================================ */
+  // .classes__wrapper {
+  //   display: flex;
+  //   margin-bottom: 5.4rem;
+  //   position: relative;
+  //   flex-direction: column;
+  //   @include mq-min($screen-md) {
+  //     flex-direction: row;
+  //   }
+  //   .accordion {
+  //     flex: 1 1 290px;
+  //     z-index: 1;
+  //     margin: 3rem;
+  //     @include mq-min($screen-md) {
+  //       margin: 0 0 0 15rem;
+  //     }
+  //     .classes__header {
+  //       margin-bottom: 5.5rem;
+  //     }
+  //     .accordion__tab {
+  //       border-top: 1px solid $c_primary_reverse;
+  //       padding: 3.2rem 0 1rem 0;
+  //       h5 {
+  //         display: flex;
+  //         justify-content: flex-start;
+  //         margin-bottom: 1.5rem;
+  //         &:before {
+  //           content: "01.";
+  //           display: block;
+  //           color: $c_accent;
+  //           margin-right: 1rem;
+  //         }
+  //         span.btn-plus-icon {
+  //           background-color: transparent;
+  //           border-radius: 0;
+  //           color: $c_primary;
+  //           font-size: 3rem;
+  //           line-height: 1;
+  //           margin: 0 2.5rem 0 auto;
+  //           padding: 0;
+  //         }
+  //       }
+  //       .accordion__body {
+  //         margin-right: 4rem;
+  //         p {
+  //           font-size: 14px;
+  //           line-height: 1.8;
+  //           margin-bottom: 1.7rem;
+  //         }
+  //         a.accordion__cta {
+  //           background-color: $c_accent;
+  //           color: $c_white;
+  //           font-size: 20px;
+  //           box-shadow: none;
+  //         }
+  //       }
+  //     }
+  //   }
+  //   .classes__video-wrapper {
+  //     z-index: 1;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     @include mq-min($screen-md) {
+  //       flex: 0 1 1143px;
+  //     }
+  //     .video__playbutton {
+  //       left: 0;
+  //       margin: 0.6rem 0 0 23.1rem;
+  //       position: absolute;
+  //       top: initial;
+  //       @include mq-min($screen-md) {
+  //         left: 50%;
+  //         top: 39.5%;
+  //       }
+  //       &:hover {
+  //         cursor: pointer;
+  //       }
+  //       svg {
+  //         width: 75px;
+  //       }
+  //       span {
+  //         color: $c_black;
+  //         display: inline-block;
+  //         font-size: 1.2rem;
+  //         font-weight: bold;
+  //         letter-spacing: 1.1px;
+  //         margin-left: 2rem;
+  //         text-transform: uppercase;
+  //       }
+  //     }
+  //     iframe {
+  //       width: 100%;
+  //       height: 100%;
+  //       padding: 11.5rem 0 14.3rem 0;
+  //     }
+  //   }
+  //   .accordion-background__image {
+  //     max-width: 1143px;
+  //     position: absolute;
+  //     right: 0;
+  //     bottom: 0;
+  //     width: 100%;
+  //     @include mq-min($screen-md) {
+  //       bottom: initial;
+  //       top: -8.7rem;
+  //     }
+  //   }
+  // }

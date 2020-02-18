@@ -1,0 +1,97 @@
+@import './../base/fonts';
+
+/* ============================================================
+Brand colors
+============================================================ */
+$c_white: #fff;
+$c_black: #000;
+$c_gray-dark: #242424;
+$c_gray: #6E6E6E;
+$c_beige: #B5B7B9;
+$c_light-beige: #d5d5d5;
+$c_lightgray: #f5f5f5;
+$c_alabaster: #F8F8F8;
+$c_yellow: #FFB016;
+$c_sunglow: #FFD023;
+$c_orange: #F26522;
+$c_darkorange: #C63829;
+$c_red: #A01D29;
+$c_punch: #DE3726;
+// theme vars
+$theme-dark:$c_black;
+$theme-alt:$c_orange;
+
+// helper vars
+$c_primary:$c_gray-dark;
+$c_primary_reverse:$c_beige;
+$c_secondary:$c_orange;
+$c_secondary_reverse:$c_lightgray;
+$c_tertiary: $c_punch;
+$c_alt:$c_red;
+$c_element:$c_darkorange;
+$c_accent:$c_yellow;
+$c_accent2:$c_sunglow;
+
+// elem vars // do not update
+$c_text_primary:$c_primary;
+$c_text_secondary:$c_secondary;
+$c_text_primary_reverse:$c_white;
+
+.c_primary            { color:$c_primary; }
+.c_primary_reverse    { color:$c_primary_reverse; }
+.c_secondary          { color:$c_secondary; }
+.c_secondary_reverse  { color:$c_secondary_reverse; }
+.c_alt                { color:$c_alt; }
+.c_element            { color:$c_element; }
+.c_accent             { color:$c_accent; }
+.c_white              { color:$c_white;}
+
+.bg_primary           { background-color:$c_primary; }
+.bg_primary_reverse   { background-color:$c_primary_reverse; }
+.bg_secondary         { background-color:$c_secondary; }
+.bg_secondary_reverse { background-color:$c_secondary_reverse; }
+.bg_alt               { background-color:$c_alt; }
+.bg_element           { background-color:$c_element; }
+.bg_accent            { background-color:$c_accent; }
+
+/* ============================================================
+Font Weights
+============================================================ */
+$fw_light: 300;
+$fw_regular: 400;
+$fw_medium: 500;
+$fw_semibold: 600;
+$fw_bold: 700;
+
+.fw_light, .fw_300      { font-weight:$fw_light; }
+.fw_regular, .fw_400    { font-weight:$fw_regular; }
+.fw_medium, .fw_500     { font-weight:$fw_regular; }
+.fw_semibold, .fw_600   { font-weight:$fw_semibold; }
+.fw_bold, .fw_700       { font-weight:$fw_bold; }
+
+/* ============================================================
+Font Families
+============================================================ */
+$font_primary: 'rift', sans-serif;
+$font_secondary: "century-gothic", sans-serif;
+
+.font_primary {
+  font-family:$font_primary;
+  font-weight:$fw_bold;
+  font-style:none;
+}
+.font_secondary {
+  font-family:$font_secondary;
+  font-weight:$fw_regular;
+  font-style:italic;
+}
+
+/* ============================================================
+Breakpoints
+============================================================ */
+$screen-xs: 575px;
+$screen-sm: 768px;
+$screen-md: 991px;
+$screen-lg: 1200px;
+$screen-xl: 1440px;
+$screen-xxl: 1740px;

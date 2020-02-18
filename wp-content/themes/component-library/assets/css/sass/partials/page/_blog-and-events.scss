@@ -1,0 +1,262 @@
+.page-template-page-blog-archive {
+  /* ============================================================
+hero
+============================================================ */
+  .hero {
+    margin-bottom: 0;
+    max-height: none;
+    &__wrapper {
+      flex-direction: column;
+      @include mq-min($screen-sm) {
+        flex-direction: column-reverse;
+      }
+    }
+    &-background__image {
+      transform: none;
+      margin: auto;
+      width: 100%;
+    }
+    &-content__wrapper {
+      background: $c_white;
+      bottom: 86px;
+      left: 8.5rem;
+      margin-left: 0;
+      max-width: 587px;
+      padding: 3rem 7rem;
+      top: initial;
+      min-height: 549px;
+      .eyebrow {
+        font-family: $font_secondary;
+        letter-spacing: 0.005rem;
+        margin-bottom: 1.9rem;
+        &:not(span) {
+          color: $c_primary_reverse;
+        }
+        span {
+          color: $c_black;
+        }
+      }
+      .page-header {
+        font-style: normal;
+        color: $c_primary;
+        font-size: 6rem;
+        line-height: 1;
+        margin-bottom: 1.7rem;
+        &:after {
+          content: "";
+          display: block;
+          border-bottom: 2px solid $c_primary_reverse;
+          width: 50px;
+          padding-top: 2.4rem;
+        }
+      }
+      p {
+        line-height: 2.1;
+        &:last-of-type {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+  /* ============================================================
+  article content
+  ============================================================ */
+  .entry-content {
+    // content
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      @include mq-min($screen-sm) {
+        flex-direction: row;
+      }
+      // content
+      .page-intro {
+        padding: 3rem;
+        @include mq-min($screen-sm) {
+          padding: 12rem 3rem 3rem 3rem;
+        }
+        .item {
+          max-width: 968px;
+          position: relative;
+          margin-bottom: 3rem;
+          img {
+            object-fit: cover;
+            max-height: 635px;
+          }
+          &-content {
+            background-color: $c_white;
+            padding: 3rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            @include mq-min($screen-sm) {
+              width: 45%;
+              padding: 3rem 3rem 3rem 0;
+            }
+            h6 {
+              font-family: $font_secondary;
+              font-size: 17px;
+              line-height: 1.4;
+              text-transform: none;
+              &.eyebrow {
+                font-size: 10px;
+                letter-spacing: 0.005rem;
+                margin-bottom: 1.9rem;
+                text-transform: uppercase;
+                &:not(span) {
+                  color: $c_primary_reverse;
+                }
+                span {
+                  color: $c_black;
+                }
+              }
+            }
+            a.button {
+              background-color: $c_tertiary;
+              border-radius: 0;
+              box-shadow: none;
+              display: inline-flex;
+              height: 33px;
+              padding: 0;
+              width: 33px;
+              svg {
+                margin: auto;
+                &:hover {
+                  @include slideOff(0.5s);
+                }
+              }
+            }
+          }
+        }
+        p {
+          position: relative;
+          text-align: left;
+          line-height: 2.17;
+          @include mq-min($screen-sm) {
+            padding-left: 8rem;
+          }
+          &:first-of-type:first-letter {
+            color: $c_tertiary;
+            font-family: $font_primary;
+            font-size: 14rem;
+            font-weight: $fw_bold;
+            padding-right: 20px;
+            line-height: 0.86;
+            float: left;
+            @include mq-min($screen-sm) {
+              left: -5px;
+              position: absolute;
+            }
+          }
+        }
+      }
+      /* ============================================================
+    sidebar
+    ============================================================ */
+      aside {
+        &.sidebar__wrapper {
+          background-color: $c_secondary_reverse;
+          padding: 3rem;
+          position: relative;
+          @include mq-min($screen-sm) {
+            flex: 0 0 378px;
+            padding: 9.4rem 5.2rem 3rem 5.2rem;
+          }
+          h3.sidebar__title {
+            font-size: 2.6rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #e3e3e3;
+          }
+          a.btn {
+            &.item-arrow {
+              background-color: $c_tertiary;
+              border-radius: 0;
+              box-shadow: none;
+              display: inline-flex;
+              height: 33px;
+              padding: 0;
+              width: 33px;
+              svg {
+                margin: auto;
+                &:hover {
+                  @include slideOff(0.5s);
+                }
+              }
+            }
+          }
+          .sidebar__card {
+            margin-bottom: 3rem;
+            &.line-below {
+              padding-bottom: 3rem;
+              border-bottom: 1px solid #e3e3e3;
+            }
+            .card__body {
+              h5 {
+                color: $c_primary_reverse;
+                font-size: 11px;
+                margin-bottom: 1rem;
+                text-transform: uppercase;
+                font-family: $font_secondary;
+                span {
+                  color: $c_black;
+                }
+              }
+              h6 {
+                font-family: $font_secondary;
+                font-size: 17px;
+                line-height: 1.4;
+                text-transform: none;
+              }
+              p {
+                font-weight: $fw_bold;
+                font-size: 16px;
+                line-height: 1.5;
+                &:last-of-type {
+                  margin-bottom: 1.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      // page-intro-shortcode__wrapper
+      .page-intro-shortcode__wrapper {
+        display: none;
+      }
+    }
+  }
+  .archive_more_posts {
+    padding-top: 3rem;
+    background-color: $c_secondary_reverse;
+    @include mq-min($screen-sm) {
+      padding-top: 7rem;
+    }
+  }
+  // hide article footer
+  footer.entry-footer {
+    display: none;
+  }
+  /* ============================================================
+  related articles
+  ============================================================ */
+  .related-articles {
+    background-color: $c_alabaster;
+    padding: 3rem;
+    @include mq-min($screen-sm) {
+      padding: 9rem;
+    }
+    > h5 {
+      padding-left: 3rem;
+    }
+    &__wrapper {
+      display: flex;
+      justify-content: flex-start;
+      max-width: 1370px;
+      .card__related {
+        max-width: 320px;
+        max-width: 320px;
+        margin: 0 3rem;
+      }
+    }
+  }
+}

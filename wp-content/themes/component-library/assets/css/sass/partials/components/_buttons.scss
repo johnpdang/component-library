@@ -1,0 +1,129 @@
+button,
+.button,
+.btn,
+.btn-primary {
+  background-color: $c_tertiary;
+  border-radius: 5px;
+  border: none;
+  color: $c_white;
+  font-family: $font_primary;
+  font-size: 20px;
+  font-weight: $fw_bold;
+  letter-spacing: 1px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 1.5rem 4rem;
+  text-transform: uppercase;
+  display: inline-block;
+  @include mq-min($screen-xs) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    transition: all 250ms ease-in-out;
+    text-decoration: none;
+    color: $c_white;
+  }
+  &:hover {
+    background-color: $c_element;
+  }
+  &:active {
+    background-color: $c_alt;
+  }
+  &:not(:disabled):not(.disabled):active {
+    background-color: $c_alt;
+  }
+  &:disabled,
+  &.disabled {
+    background-color: $c_primary_reverse;
+    color: $c_white;
+  }
+  svg {
+    &:hover {
+      @include slideOff(0.5s);
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  &-sm {
+    padding: 1rem 2rem;
+    font-size: 16px;
+  }
+  &-md {
+    padding: 2rem 4rem;
+  }
+
+  &-lg {
+    padding: 3rem 6rem;
+  }
+  &-hover {
+    background-color: $c_element;
+  }
+  &-focus {
+    background-color: $c_alt;
+  }
+  &-disabled {
+    background-color: $c_primary_reverse;
+    color: $c_white;
+  }
+  &-reverse:not(.disabled) {
+    background-color: transparent;
+    color: $c_secondary;
+    border-radius: 0;
+    padding: 0;
+    &:hover,
+    &:active,
+    &:focus {
+      transition: all 250ms ease-in-out;
+    }
+    &:hover {
+      background-color: transparent;
+      color: $c_white;
+    }
+  }
+
+  &__theme {
+    // @include td_transition();
+    @extend .btn;
+    background: $c_primary;
+    color: $c_white;
+    &:hover {
+      background: $c_white !important;
+      color: $c_primary !important;
+    }
+
+    &__md {
+      @extend .btn__theme;
+      min-width: 220px;
+      max-width: 100%;
+      padding: 20px;
+    }
+    &__lg {
+      @extend .btn__theme;
+      min-width: 220px;
+      padding: 22px 30px;
+    }
+    &__lg__parent {
+      a {
+        @extend .btn__theme__lg;
+        display: inline-block !important;
+      }
+    }
+  }
+}
+
+.slick-slider {
+  button {
+    &.slick-prev,
+    &.slick-next {
+      background-color: transparent;
+      padding: 1rem;
+      font-size: 0;
+    }
+  }
+}

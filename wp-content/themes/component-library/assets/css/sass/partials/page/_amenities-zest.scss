@@ -1,0 +1,111 @@
+.postid-211 {
+  /* ============================================================
+  hero
+  ============================================================ */
+  .hero {
+    max-height: 979px;
+    margin-bottom: 25rem;
+    @include mq-min($screen-sm) {
+      margin-bottom: 0;
+      max-height: 985px;
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      @include mq-min($screen-sm) {
+        padding-top: 5.7rem;
+      }
+    }
+    &-background__image {
+      position: initial;
+      z-index: 1;
+      @include mq-min($screen-sm) {
+        transform: none;
+        width: 60vw;
+      }
+      @include mq-min($screen-xl) {
+        width: 90vw;
+      }
+      img {
+        max-height: 1000px;
+        opacity: 1;
+        z-index: 1;
+      }
+    }
+    &-logo__image {
+      background-color: $c_white;
+      bottom: -15rem;
+      display: flex;
+      justify-content: center;
+      max-width: none;
+      right: 0;
+      top: initial;
+      width: 100%;
+      z-index: 0;
+      @include mq-min($screen-sm) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 130px;
+        left: 0;
+        right: initial;
+        top: 11vh;
+        width: calc(100vw - 13rem);
+      }
+      @include mq-min($screen-lg) {
+        top: 20vh;
+      }
+      @include mq-min($screen-xl) {
+        top: 25vh;
+      }
+      img {
+        max-width: 215px;
+        min-height: 70px;
+        object-fit: contain;
+        padding-left: 1rem;
+        padding-top: 0;
+        @include mq-min($screen-sm) {
+          width: 16vw;
+        }
+        @include mq-min($screen-lg) {
+          margin-left: 3rem;
+        }
+        @include mq-min($screen-xl) {
+          margin-left: 5rem;
+        }
+      }
+    }
+    &-content__wrapper {
+      top: 25vh;
+      @include mq-min($screen-sm) {
+        z-index: 1;
+        margin-left: -36rem;
+      }
+      @include mq-min($screen-lg) {
+        top: 38vh;
+      }
+      @include mq-min($screen-xl) {
+        top: 40vh;
+        margin-left: -69rem;
+      }
+      h1.page-header {
+        color: $c_white;
+        font-style: italic;
+        line-height: 0.86;
+        @include mq-min($screen-sm) {
+          font-size: 13rem;
+        }
+      }
+    }
+  }
+
+  .page-intro {
+    span.first-letter {
+      color: $c_accent2;
+    }
+    @include mq-min($screen-sm) {
+      padding-bottom: 0;
+      padding-top: 17rem;
+    }
+  }
+}

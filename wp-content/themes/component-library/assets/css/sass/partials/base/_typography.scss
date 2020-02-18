@@ -1,0 +1,188 @@
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @media (max-width: 1024px) {
+    font-size: 50%;
+  }
+  @media (max-width: 767px) {
+    font-size: 42%;
+  }
+  @media (min-width: 1400px) {
+    // font-size:87.5%;
+  }
+}
+body {
+  font-family: $font_secondary;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  color: #333;
+  font-size: 16px;
+  font-weight: $fw_light;
+  line-height: 1.66;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: $fw_bold;
+  margin: 0 0 30px;
+  color: $c_primary;
+  font-family: $font_primary;
+}
+
+h1,
+.h1 {
+  font-size: 8.6rem;
+  line-height: 1.2;
+}
+
+h2,
+.h2 {
+  font-size: 7.2rem;
+  line-height: 0.95;
+}
+
+h3,
+.h3 {
+  font-size: 5.4rem;
+  line-height: 1.2;
+}
+
+h4,
+.h4 {
+  color: #333;
+  font-size: 4rem;
+  line-height: 1.2;
+}
+
+h5,
+.h5 {
+  font-size: 2.6rem;
+  line-height: 1.2;
+}
+
+h6,
+.h6 {
+  font-size: 14px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.text_display {
+  font-size: 10.4rem;
+  font-weight: $fw_bold;
+  line-height: 1.4;
+  font-style: italic;
+}
+.eyebrow {
+  font-size:10px;
+}
+
+p {
+  font-family: $font_secondary;
+  font-size: 16px;
+  line-height: 2;
+}
+.text-small {
+  font-size: 0.9rem;
+}
+ul,
+ol {
+  margin-left: 2rem;
+}
+.sub-header {
+  font-size: 21px;
+  line-height: 36px;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  color: #666;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.7;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+blockquote cite {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 0.5em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  background: #eee;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: #eee;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+:focus {
+  outline: none;
+}

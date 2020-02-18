@@ -1,0 +1,18 @@
+@include ie("section.section-info .text_left") {
+  flex-direction: column;
+}
+@include ie("section.section-info .text_right") {
+  flex-direction: column;
+}
+@include ie (".home section.section-class .grid-container figure.image__fg img") {
+  max-width:137px;
+}
+@include ie ("section.section-info .text_left, section.section-info .text_right") {
+  display: inline-block;
+}
+@include ie("header.site-header .navigation-top") {
+  display: block;
+}
+@include ie (".hero-home.hero .hero-background__slider .card__hero-slide") {
+  width: inherit !important;
+}

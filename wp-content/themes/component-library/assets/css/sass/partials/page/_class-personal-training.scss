@@ -1,0 +1,219 @@
+/* ============================================================
+personal training class page
+============================================================ */
+.class-template-default.postid-228 {
+
+  /* ============================================================
+  hero
+  ============================================================ */
+  .hero {
+    background-color: $c_tertiary;
+    margin-bottom: 15rem;
+
+    @include mq-min($screen-sm) {
+      margin-bottom: 0;
+    }
+
+    &-logo__image {
+      bottom: -12rem;
+
+      &:before {
+        content: "Personal Training";
+        color: $c_tertiary;
+        display: block;
+        font-family: $font_primary;
+        font-size: 7rem;
+        font-style: italic;
+        font-weight: $fw_bold;
+        line-height: 1.1;
+        margin-left: 3rem;
+        max-width: none;
+
+        @include mq-min($screen-sm) {
+          width: 16vw;
+          font-size: 2.8rem;
+          max-width: 125px;
+        }
+
+        @include mq-min($screen-md) {
+          font-size: 3.3rem;
+          max-width: 215px;
+        }
+      }
+
+      img {
+        display: none;
+      }
+    }
+  }
+
+  .entry-content {
+    .classes-cta {
+      display: none;
+    }
+  }
+
+  .intro__section-wrapper {
+
+    // intro paragraph
+    .page-intro {
+
+      span.first-letter,
+      span.first-letter-hidden {
+        color: $c_tertiary;
+      }
+    }
+
+    // sidebar
+    aside {
+      &.intro__sidebar {
+        a.btn.item-arrow {
+          background-color: $c_tertiary;
+        }
+      }
+    }
+
+    .gallery-slider {
+      margin-bottom: 6rem;
+    }
+  }
+
+  /* ============================================================
+  section-content
+  ============================================================ */
+  .section-content {
+    margin-bottom: 3rem;
+
+    @include mq-min($screen-md) {
+      margin-bottom: 0;
+    }
+
+    .container {
+      max-width: none;
+      padding: 0;
+      width: 100%;
+    }
+
+    .text_left {
+      padding: 0 3rem;
+
+      @include mq-min($screen-lg) {
+        padding: 0;
+        margin-left: 28.7rem;
+      }
+
+      .text-content {
+        flex-basis: 100%;
+        max-width: 100%;
+        padding: 3rem;
+
+        @include mq-min($screen-md) {
+          padding: 0 3rem 0 10rem;
+        }
+
+        h2.column-title {
+          font-size: 4rem;
+
+          &:after {
+            content: "";
+            border-bottom: 2px solid $c_light-beige;
+            display: block;
+            padding-bottom: 3rem;
+            width: 50px;
+          }
+        }
+      }
+
+      .image-content {
+        display: none;
+      }
+    }
+  }
+
+  .class__group-wrapper {
+    display: none;
+  }
+
+  /* ============================================================
+  blockquote
+  ============================================================ */
+  .section-quote {
+    background-color: $c_tertiary;
+  }
+
+  /* ============================================================
+  instructors
+  ============================================================ */
+  .instructors {
+    &__group-wrapper {
+      background-color: $c_primary;
+
+      h5.instructors__group-title {
+        font-size: 4rem;
+        text-align: left;
+        color: $c_white;
+        margin-left: 3rem;
+
+        @include mq-min($screen-sm) {
+          margin-left: 14rem;
+        }
+
+        &:after {
+          display: none;
+        }
+      }
+
+      .slick-slider {
+        button {
+          // &.slick-next {
+          //   top: 28%;
+          // }
+          // &.slick-prev {
+          //   top: calc(12rem + 18%);
+          // }
+        }
+
+        .slick-list {
+          margin-left: 0;
+
+          @include mq-min($screen-sm) {
+            margin-left: 3rem;
+          }
+
+          @include mq-min($screen-md) {
+            margin-left: 14rem;
+          }
+
+          .slick-slide {
+            .instructor__body {
+              padding: 0 3rem;
+
+              @include mq-min($screen-sm) {
+                padding: 0;
+              }
+            }
+
+            h5.instructor__name {
+              font-family: $font_primary;
+              color: $c_white;
+              font-size: 2.6rem;
+            }
+
+            p {
+              color: $c_white;
+
+              &.instructor__title.eyebrow {
+                color: $c_tertiary;
+                margin-bottom: 1rem;
+              }
+
+              &.instructor__desc {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

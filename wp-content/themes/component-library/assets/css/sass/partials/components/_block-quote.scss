@@ -1,0 +1,20 @@
+blockquote,
+.blockquote {
+  color: $c_primary;
+  font-family: $font_primary;
+  font-size: 6rem;
+  font-weight: $fw_bold;
+  line-height: 1.2;
+  quotes: "" "";
+  span {
+    display: block;
+    font-size: 3rem;
+    line-height: 1.6;
+    margin-right: 10%;
+    text-align: right;
+    &:after {
+      border-top: 2px solid $c_primary;
+      width: 200px;
+    }
+  }
+}

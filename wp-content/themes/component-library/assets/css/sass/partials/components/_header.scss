@@ -1,0 +1,360 @@
+$mobileBreak: 1100px;
+#page {
+  padding-top: 60px;
+  @include mq-min($mobileBreak) {
+    padding-top: 85px;
+  }
+  @include mq-min($screen-xl) {
+    padding-top: 75px;
+  }
+
+  .admin-bar & {
+    @include mq-max(600px) {
+      padding-top: 15px;
+    }
+  }
+}
+header {
+  @include mq-min($screen-md) {
+    flex-direction: row;
+    justify-content: normal;
+  }
+  &.site-header {
+    background-color: $c_white;
+    color: $c_primary;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 60px;
+    padding: 15px 0 15px 15px;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s ease-in-out 0.5s, padding 0.2s ease-in-out,
+      min-height 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out 0.5s, padding 0.2s ease-in-out,
+      min-height 0.2s ease-in-out;
+    z-index: 99;
+    @include mq-min($mobileBreak) {
+      min-height: 85px;
+      padding: 0 15px;
+      align-items: center;
+    }
+    @include mq-min($screen-xl){
+        min-height:75px;
+    }
+
+    .admin-bar & {
+      @include mq-min(601px) {
+        top: 46px;
+      }
+      @include mq-min(783px) {
+        top: 32px;
+      }
+    }
+
+    .modal-active & {
+      opacity: 0;
+      -webkit-transition: opacity 0.2s ease-in-out, padding 0.2s ease-in-out,
+        min-height 0.2s ease-in-out;
+      transition: opacity 0.2s ease-in-out, padding 0.2s ease-in-out,
+        min-height 0.2s ease-in-out;
+    }
+
+    &.scrolled {
+      @include mq-min($mobileBreak) {
+        min-height: 60px;
+        padding: 5px 0 5px 15px;
+      }
+
+      .navbar-brand {
+        .image_link {
+          width: 130px;
+        }
+      }
+      nav ul.menu .sub-menu.mega-menu.toggled-on {
+        top: 60px;
+      }
+    }
+
+    .wrap {
+      padding: 0 1rem;
+      .logo {
+        @include mq-min($screen-sm) {
+          width: 25%;
+        }
+      }
+    }
+    /* ============================================================
+    logo
+    ============================================================ */
+    .navbar-brand {
+      margin-left: 1.25rem;
+      width: 144px;
+      position: relative;
+      @include mq-min($mobileBreak) {
+        width: auto;
+        margin-left: 36px;
+        flex-basis: 15%;
+      }
+      .image_link {
+        width: 230px;
+        max-width: 100%;
+        -webkit-transition: width 0.2s ease-in-out;
+        transition: width 0.2s ease-in-out;
+
+        @include mq-min($screen-xl){
+            width:254px;
+        }
+      }
+    }
+    /* ============================================================
+    nav
+    ============================================================ */
+    .navigation {
+      &-top {
+        display: none;
+        @include mq-min($mobileBreak) {
+          flex-basis: 65%;
+          display: initial;
+        }
+        .main-navigation {
+          display: flex;
+          justify-content: flex-start;
+          width: 100%;
+          @include mq-min($mobileBreak) {
+            justify-content: center;
+            //margin-left:-8%;
+          }
+        }
+      }
+      &-mobile {
+        display: block;
+        @include mq-min($mobileBreak) {
+          display: none !important;
+        }
+      }
+      &-text {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+
+        @include mq-min($mobileBreak) {
+          display: none;
+        }
+      }
+      &-overlay {
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $c_white;
+
+        @include mq-min($mobileBreak) {
+          display: none;
+        }
+      }
+    }
+
+    .menu-toggle {
+      //width: 50%;
+      // flex-grow: 2;
+      // z-index: 2;
+      // position: relative;
+      // display:flex;
+      // align-items:center;
+      // justify-content: flex-end;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 60px;
+      @include mq-min($mobileBreak) {
+        display: none;
+      }
+      .toggle {
+        width: 100%;
+        height: 100%;
+        background-color: $c_gray-dark;
+        position: relative;
+        border-radius: 0;
+        padding: 0;
+
+        &:hover,
+        &:focus {
+          background: $c_black;
+        }
+
+        span {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        span.open {
+          font-size: 11px;
+          line-height: 20px;
+          letter-spacing: 1.1px;
+          border-top: 1px solid $c_white;
+          border-bottom: 1px solid $c_white;
+        }
+
+        span.close {
+          display: none;
+        }
+      }
+    }
+
+    .navbar-brand,
+    .menu-toggle {
+      z-index: 2;
+    }
+
+    // elements for nav in mobile
+
+    .navbar-search {
+      display: none;
+      @include mq-min($mobileBreak) {
+        flex-basis: 15%;
+        display: block;
+        margin-right: 36px;
+        margin-left: 1rem;
+      }
+      button.search-submit {
+        background-color: transparent;
+      }
+      svg.icon-search {
+        fill: $c_primary;
+      }
+    }
+
+    .search {
+      &-form {
+        label {
+          margin: 0;
+        }
+        .search-submit {
+          bottom: 0;
+          margin: auto;
+          padding: 1px 10px;
+          position: absolute;
+          right: 0px;
+          top: 0;
+          .icon {
+            height: 20px;
+            top: -3px;
+            width: 20px;
+          }
+        }
+      }
+      &-field {
+        background: #fff;
+        border: 1px solid transparent;
+        color: $c_black;
+        padding-right: 3.5rem;
+        &:active,
+        &:focus {
+          background-color: #f5f5f5;
+        }
+        &::placeholder {
+          color: transparent;
+        }
+      }
+    }
+
+    #nav-join {
+      padding: 0 80px 0 20px;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      @include mq-min($mobileBreak) {
+        display: block;
+        flex-basis: 15%;
+        margin: 0 36px 0 1rem;
+        padding: 0;
+      }
+      a {
+        align-items: center;
+        color: $c_tertiary;
+        display: inline-flex;
+        font-family: $font_primary;
+        font-size: 17px;
+        font-weight: 700;
+        justify-content: flex-end;
+        letter-spacing: 1.6px;
+        text-align: left;
+        text-decoration: none;
+        text-transform: uppercase;
+        white-space: nowrap;
+        @include mq-min($mobileBreak) {
+          width: 254px;
+        }
+        svg {
+          display: none;
+          @include mq-min($mobileBreak) {
+            margin-left: 5px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    /* ============================================================
+    searchbar
+    ============================================================ */
+    // .navbar-search {
+    //   display: none;
+    //   @include mq-min($screen-md) {
+    //     flex-basis: 15%;
+    //     display: block;
+    //     margin-right: 36px;
+    //     margin-left: 1rem;
+    //   }
+    //   button.search-submit {
+    //     background-color: transparent;
+    //   }
+    //   svg.icon-search {
+    //     fill: $c_primary;
+    //   }
+    // }
+    // .search {
+    //   &-form {
+    //     label {
+    //       margin: 0;
+    //     }
+    //     .search-submit {
+    //       bottom: 0;
+    //       margin: auto;
+    //       padding: 1px 10px;
+    //       position: absolute;
+    //       right: 0px;
+    //       top: 0;
+    //       .icon {
+    //         height: 20px;
+    //         top: -3px;
+    //         width: 20px;
+    //       }
+    //     }
+    //   }
+    //   &-field {
+    //     background: #fff;
+    //     border: 1px solid transparent;
+    //     color: $c_black;
+    //     padding-right: 3.5rem;
+    //     &:active,
+    //     &:focus {
+    //       background-color: #f5f5f5;
+    //     }
+    //     &::placeholder {
+    //       color: transparent;
+    //     }
+    //   }
+    // }
+  }
+}

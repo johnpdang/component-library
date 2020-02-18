@@ -1,0 +1,114 @@
+.class-template-default.postid-200 {
+  .hero {
+    background-color: $c_accent;
+  }
+
+  .intro__section-wrapper {
+    // intro paragraph
+    .intro__main {
+      .intro__block {
+        p {
+          span.first-letter,
+          span.first-letter-hidden {
+            color: $c_accent;
+          }
+        }
+      }
+    }
+
+    // sidebar
+    aside {
+      &.intro__sidebar {
+        a {
+          svg {
+            rect#Rectangle_1233 {
+              fill: $c_accent;
+            }
+            line#Line_17,
+            line#Line_18,
+            line#Line_41 {
+              stroke: $c_white;
+            }
+          }
+        }
+        > a {
+          color: $c_black;
+          svg {
+            line#Line_17,
+            line#Line_18,
+            line#Line_41 {
+              stroke: $c_black;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* ============================================================
+  content
+  ============================================================ */
+  .entry-content {
+    .classes-cta {
+      a {
+        @include mq-min($screen-sm) {
+          color: $c_black;
+        }
+        svg {
+          line#Line_17,
+          line#Line_18,
+          line#Line_41 {
+            @include mq-min($screen-sm) {
+              stroke: $c_black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* ============================================================
+  classes
+  ============================================================ */
+  .class__group-wrapper {
+    .class__container {
+      .class__featured {
+        .class__featured-image {
+          &:after {
+            background-color: $c_accent;
+          }
+        }
+        .classes__video-wrapper {
+          //temp hide video until acf conditional is figured out
+          display: none;
+        }
+      }
+      .class__card-container {
+        .class__card {
+          a {
+            &.item-arrow {
+              background-color: $c_accent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* ============================================================
+  blockquote
+  ============================================================ */
+  .section-quote {
+    background-color: $c_accent;
+  }
+
+  /* ============================================================
+  instructors
+  ============================================================ */
+  .instructors__group-wrapper {
+    h5.instructors__group-title {
+      &:after {
+        border-bottom: 2px solid $c_accent;
+      }
+    }
+  }
+}

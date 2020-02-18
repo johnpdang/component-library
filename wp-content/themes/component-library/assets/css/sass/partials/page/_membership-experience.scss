@@ -1,0 +1,42 @@
+.page-id-159 {
+  .hero {
+    background-color: $c_tertiary;
+    max-height: 100%;
+    @include mq-min($screen-sm) {
+      max-height: 980px;
+    }
+    &-background__image {
+      @include mq-min($screen-sm) {
+        max-width: 834px;
+      }
+    }
+    &-content {
+      left: 36rem;
+      top: 54rem;
+      h1 {
+        font-size: 8rem;
+        letter-spacing: -0.4px;
+        line-height: 0.85;
+        @include mq-min($screen-sm) {
+          font-size: 13.1rem;
+          color: $c_white;
+        }
+      }
+    }
+  }
+
+  .page-intro {
+    margin-bottom: 3rem;
+    max-width: 1020px;
+    padding-top: 3rem;
+    @include mq-min($screen-sm) {
+      margin-bottom: 11rem;
+      padding-top: 17.1rem;
+    }
+    p {
+      span.first-letter {
+        color: $c_darkorange;
+      }
+    }
+  }
+}

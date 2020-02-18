@@ -1,0 +1,239 @@
+main {
+  & > section:first-of-type {
+    &.container,
+    .container {
+      padding-bottom: 4rem;
+    }
+  }
+
+  section:last-of-type {
+    .container {
+      padding-top: 0;
+      padding-bottom: 8rem;
+    }
+  }
+}
+
+#section-info {
+  ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+
+  .icon {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    right: -5%;
+    top: 7%;
+
+    &__bottom-left {
+      right: inherit;
+      top: inherit;
+      left: -8%;
+      bottom: 10%;
+    }
+
+    &__bottom-right {
+      right: -4%;
+      top: inherit;
+      bottom: 11%;
+    }
+
+    &__top-left {
+      right: inherit;
+      top: inherit;
+      left: 0%;
+      top: 0%;
+    }
+
+    &__top-right {
+      right: inherit;
+      top: inherit;
+      right: 0%;
+      top: 0%;
+    }
+
+    img {
+      border-style: none;
+      width: 50%;
+      margin: 5rem;
+      display: flex;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      padding-top: 2.25rem;
+    }
+  }
+}
+
+.hover-content__wrapper {
+  position: absolute;
+  transition: all 0.2s ease-in;
+
+  &.hidden {
+    opacity: 0;
+    z-index: 1;
+    visibility: hidden;
+  }
+
+  &.active {
+    opacity: 1;
+    z-index: 1;
+    visibility: visible;
+  }
+}
+
+section {
+  &.section-info {
+    .text_left,
+    .text_right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .text-content {
+        p:last-of-type {
+          margin-bottom: 1rem;
+        }
+      }
+      .image-content {
+        padding: 0;
+        figure {
+          margin: 0;
+        }
+      }
+    }
+    .text_right {
+      flex-direction: column-reverse;
+      @include mq-min($screen-sm) {
+        flex-direction: row-reverse;
+      }
+      .text-content {
+        padding: 3rem 0;
+        @include mq-min($screen-sm) {
+          padding: 0 3rem 0 10rem;
+        }
+      }
+    }
+    .text_left {
+      flex-direction: column-reverse;
+      @include mq-min($screen-sm) {
+        flex-direction: row;
+      }
+      .text-content {
+        padding: 3rem 0;
+        @include mq-min($screen-sm) {
+          padding: 0 3rem 0 10rem;
+        }
+      }
+    }
+  }
+}
+
+.section-info.two-col-image-bg {
+  .container {
+    padding-left:0;
+    padding-right:0;
+  }
+
+  .toi__block {
+    &__wrap {
+      position:relative;
+    }
+
+    &__item {
+      position:relative;
+      padding-top:55vw;
+      z-index:2;
+      display:flex;
+      justify-content:center;
+
+      @include mq-min($screen-sm){
+        padding-top:30vw;
+        justify-content:flex-end;
+      }
+
+      &:nth-child(even) {
+        @include mq-min($screen-sm){
+          justify-content: flex-start;
+        }
+
+        .toi__block__inner {
+          background: $c_gray-dark;
+          @include mq-min($screen-sm){
+            right:auto;
+            left:-.5rem;
+          }
+        }
+        .toi__block__bg {
+          @include mq-min($screen-sm){
+            right:auto;
+            left:0;
+          }
+        }
+      }
+    }
+
+    &__inner {
+      width:calc(100% - 30px);
+      padding: 30px;
+      color: $c_white;
+      background: $c_punch;
+      position:relative;
+
+      @include mq-min($screen-sm){
+        right:-.5rem;
+      }
+
+      @include mq-min($screen-md){
+        padding: 60px 70px;
+      }
+
+      .column-title {
+        font-size:40px;
+        line-height:46px;
+        color: $c_white;
+
+        &:after {
+          content: "";
+          border-bottom: 2px solid #d5d5d5;
+          display: block;
+          padding-bottom: 3rem;
+          width: 50px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        line-height:1.5;
+
+        @include mq-min($screen-sm){
+          line-height:42px;
+          font-size:22px;
+        }
+
+        &:last-child {
+          margin-bottom:0;
+        }
+      }
+    }
+
+    &__bg {
+      position:absolute;
+      z-index:-1;
+      top:0;
+      right:0;
+      width:100%;
+      height:100%;
+      background-position:center;
+      background-repeat:no-repeat;
+      background-size:cover;
+
+      @include mq-min($screen-sm){
+        width:790px;
+        max-width:calc(50vw - 30px);
+      }
+    }
+  }
+}

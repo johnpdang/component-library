@@ -1,0 +1,248 @@
+.amenity-template-default {
+  /* ============================================================
+hero
+============================================================ */
+  .hero {
+    background-color: $c_tertiary;
+    @include mq-min($screen-sm) {
+      max-height: 980px;
+    }
+    &-background__image {
+      @include mq-min($screen-md) {
+        max-width: 834px;
+      }
+    }
+    &-content__wrapper {
+      .page-header {
+        line-height: 0.86;
+        @include mq-min($screen-sm) {
+          font-size: 13rem;
+        }
+      }
+    }
+  }
+
+  /* ============================================================
+  page intro
+  ============================================================ */
+  .page-intro {
+    @include mq-min($screen-sm) {
+      max-width: 962px;
+      padding-bottom: 11.7rem;
+      padding-top: 11rem;
+    }
+    p {
+      span.first-letter {
+        color: $c_tertiary;
+      }
+    }
+  }
+
+  /* ============================================================
+section info
+============================================================ */
+  .section-info {
+    .grid-container {
+      width: 100%;
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+    &.section {
+      /* ============================================================
+      gallery slider
+      ============================================================ */
+      &-gallery-slider {
+        background-color: $c_lightgray;
+        padding-bottom: 3rem;
+        @include mq-min($screen-sm) {
+          padding-bottom: 0;
+        }
+        .container.container__xl {
+          max-width: 100%;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          @include mq-min($screen-sm) {
+            padding-bottom: 8.6rem;
+          }
+        }
+        .grid-container {
+          margin-bottom: 4.5rem;
+          display: block;
+        }
+      }
+      /* ============================================================
+      staggered image/text
+      ============================================================ */
+      &-staggered {
+        background-color: $c_lightgray;
+        padding-bottom: 3rem;
+        @include mq-min($screen-lg) {
+          padding-bottom: 5.8rem;
+        }
+        .container.container__xl {
+          max-width: 1459px;
+          .row {
+            .text_left,
+            .text_right {
+              .text-content {
+                .column-title {
+                  font-size: 40px;
+                  &:after {
+                    content: "";
+                    border-bottom: 2px solid $c_light-beige;
+                    display: block;
+                    padding-bottom: 4rem;
+                    width: 50px;
+                  }
+                }
+              }
+            }
+            .text_left {
+              .text-content {
+                @include mq-min($screen-sm) {
+                  padding: 0 10rem 0 0;
+                }
+              }
+              .image-content {
+                figure.image__wrapper {
+                  padding: 0 0 3rem 0;
+                  @include mq-min($screen-sm) {
+                    padding: 0px 0 3rem 1.5rem;
+                  }
+                }
+              }
+            }
+            .text_right {
+              .text-content {
+                @include mq-min($screen-sm) {
+                  padding: 5rem 0 0 7rem;
+                }
+              }
+              .image-content {
+                figure.image__wrapper {
+                  padding: 0 0 3rem 0;
+                  @include mq-min($screen-sm) {
+                    padding: 1rem 1.5rem 3rem 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      /* ============================================================
+      amenities image/list block
+      ============================================================ */
+      &-list {
+        .container.container__xl {
+          @include mq-min($screen-sm) {
+            max-width: 100%;
+            width: 100%;
+            padding: 0;
+          }
+          .text_right {
+            width: 100%;
+            .image-content {
+              max-width: 100%;
+              @include mq-min($screen-md) {
+                flex-basis: 50%;
+                max-width: 50%;
+              }
+            }
+            .text-content {
+              margin: 5rem 0 5rem 0;
+              @include mq-min($screen-md) {
+                margin: 5rem 0 5rem 5rem;
+              }
+              @include mq-min($screen-lg) {
+                margin: 0 auto;
+                padding: 0rem 0 0 7rem;
+              }
+            }
+            .text-content .column-title {
+              font-size: 40px;
+              margin-bottom: 35px;
+            }
+            .image-content .image__wrapper {
+              margin: 0;
+            }
+          }
+        }
+        .text_left {
+          width: 100%;
+          @include mq-min($screen-lg) {
+            .image-content .image__wrapper {
+              width: 63%;
+            }
+          }
+        }
+        .amenities-ul {
+          list-style-type: none;
+          margin: 0;
+          padding-top: 5px;
+          @include mq-min($screen-lg) {
+            width: 55%;
+          }
+          li {
+            border-bottom: 1px solid $c_light-beige;
+            font-family: $font_primary;
+            font-size: 2.6rem;
+            font-weight: $fw_bold;
+            padding: 21px 0;
+            &:first-of-type {
+              border-top: 1px solid $c_light-beige;
+            }
+            &:before {
+              content: "";
+              background-image: url(/wp-content/uploads/2019/09/small-orange-arrow.svg);
+              background-position: left center;
+              background-repeat: no-repeat;
+              display: inline-block;
+              height: 25px;
+              margin-right: 23px;
+              width: 14px;
+            }
+            a {
+              box-shadow: none;
+              transition: none;
+
+              &:hover {
+                text-decoration: none;
+              }
+            }
+            .amenities-arrow {
+              color: $c_orange;
+              font-size: 20px;
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+      &:last-of-type {
+        margin-bottom: 19rem;
+      }
+    }
+  }
+}
+
+/* ============================================================
+rooftop page specific
+============================================================ */
+.postid-212 {
+  .hero {
+    background-color: $c_tertiary;
+    @include mq-min($screen-sm) {
+      max-height: 985px;
+    }
+  }
+}
+
+/* ============================================================
+zest page specific colors
+============================================================ */
+.postid-211 {
+  .hero {
+    background-color: $c_accent2;
+  }
+}

@@ -1,0 +1,259 @@
+// Basic styling for forms on the site, edit this as needed
+label {
+  color: #333;
+  display: block;
+  font-weight: 800;
+  margin-bottom: 0.5em;
+}
+
+fieldset {
+  margin-bottom: 1em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #666;
+  background: #fff;
+  background-image: -webkit-linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0)
+  );
+  border: 1px solid #bbb;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  display: block;
+  padding: 0.7em;
+  width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: #222;
+  border-color: #333;
+}
+
+select {
+  border: 1px solid #bbb;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  height: 3em;
+  max-width: 100%;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 0.5em;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  font-weight: 400;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+  background-color: #222;
+  border: 0;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 800;
+  line-height: 1;
+  padding: 1em 2em;
+  text-shadow: none;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+input + button,
+input + input[type="button"],
+input + input[type="submit"] {
+  padding: 0.75em 2em;
+}
+
+button.secondary,
+input[type="reset"],
+input[type="button"].secondary,
+input[type="reset"].secondary,
+input[type="submit"].secondary {
+  background-color: #ddd;
+  color: #222;
+}
+
+button:hover,
+button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background: #767676;
+}
+
+button.secondary:hover,
+button.secondary:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="button"].secondary:hover,
+input[type="button"].secondary:focus,
+input[type="reset"].secondary:hover,
+input[type="reset"].secondary:focus,
+input[type="submit"].secondary:hover,
+input[type="submit"].secondary:focus {
+  background: #bbb;
+}
+
+button.arrow-button {
+  background: none !important;
+  overflow: hidden;
+  width: 10px;
+  height: 10px;
+  text-indent: -99999px;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  position: relative;
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    text-indent: 0;
+
+    line {
+      stroke: $c_white;
+      -webkit-transition: stroke 0.3s ease-in-out;
+      transition: stroke 0.3s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      line {
+        stroke: $c_black;
+      }
+    }
+  }
+}
+.sticky__footer {
+  #gform_wrapper_2 {
+    width: 250px !important;
+    position: relative;
+    margin-top: 0;
+    @include mq-min($screen-sm) {
+      margin: 8px 0;
+      width: 500px !important;
+      max-width: calc(100% - 400px) !important;
+    }
+
+    li {
+      margin-top: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .top_label div.ginput_container {
+      margin-top: 0 !important;
+
+      input {
+        background: #a02d24;
+        color: $c_white !important;
+        font-size: 12px !important;
+        margin-bottom: 0 !important;
+        margin-top:0;
+        padding: 8px 40px 8px 20px !important;
+        width: 100%;
+        @include elem_animate();
+
+        &::-webkit-input-placeholder {
+          color: $c_white;
+        }
+        &::-moz-input-placeholder {
+          color: $c_white;
+        }
+        &:-ms-input-placeholder {
+          color: $c_white;
+        }
+        &:-moz-input-placeholder {
+          color: $c_white;
+        }
+      }
+    }
+
+    .gfield_label {
+      display: none !important;
+    }
+
+    .gform_footer {
+      padding: 0 !important;
+      margin: 0 !important;
+      position: static;
+
+      input[type="submit"],
+      button {
+        transform: translate(0, -50%);
+        position: absolute;
+        right: 20px;
+        top: 50%;
+      }
+    }
+  }
+}
+
+/* Placeholder text color -- selectors need to be separate to work. */
+
+::-webkit-input-placeholder {
+  color: #333;
+  font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+:-moz-placeholder {
+  color: #333;
+  font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+::-moz-placeholder {
+  color: #333;
+  font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+  opacity: 1;
+  /* Since FF19 lowers the opacity of the placeholder by default */
+}
+
+:-ms-input-placeholder {
+  color: #333;
+  font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+}

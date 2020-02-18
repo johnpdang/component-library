@@ -1,0 +1,158 @@
+/* ============================================================
+cardio & weight training page
+============================================================ */
+.class-template-default.postid-227 {
+  .hero {
+    background-color: $c_tertiary;
+    margin-bottom: 15rem;
+
+    @include mq-min($screen-sm) {
+      margin-bottom: 0;
+    }
+
+    &-logo__image {
+      bottom: -12rem;
+
+      &:before {
+        content: "Cardio & Weight Training";
+        color: $c_tertiary;
+        display: block;
+        font-family: $font_primary;
+        font-size: 5rem;
+        font-style: italic;
+        font-weight: $fw_bold;
+        line-height: 1.1;
+        margin-left: 3rem;
+        max-width: none;
+
+        @include mq-min($screen-sm) {
+          width: 16vw;
+          font-size: 2.8rem;
+          max-width: 125px;
+        }
+
+        @include mq-min($screen-md) {
+          font-size: 3.3rem;
+          max-width: 215px;
+        }
+      }
+
+      img {
+        display: none;
+      }
+    }
+
+    &-content__wrapper {
+      h1.page-header {
+        font-size: 6rem;
+
+        @include mq-min($screen-sm) {
+          font-size: 11rem;
+        }
+      }
+    }
+  }
+
+  .entry-content {
+    .classes-cta {
+      display: none;
+    }
+  }
+
+  .intro__section-wrapper {
+
+    // intro paragraph
+    .page-intro {
+
+      span.first-letter,
+      span.first-letter-hidden {
+        color: $c_tertiary;
+      }
+    }
+
+    // sidebar
+    aside {
+      &.intro__sidebar {
+        a.btn.item-arrow {
+          background-color: $c_tertiary;
+        }
+      }
+    }
+  }
+
+  .class__group-wrapper {
+    display: none;
+  }
+
+  /* ============================================================
+  section-staggered
+  ============================================================ */
+  .section-staggered {
+    margin-bottom: 3rem;
+
+    @include mq-min($screen-sm) {
+      margin-bottom: 5rem;
+    }
+
+    .container {
+      max-width: none;
+      padding: 0;
+      width: 100%;
+    }
+
+    .text_left,
+    .text_right {
+      width: 100%;
+
+      .text-content {
+        padding: 3rem;
+        max-width: 665px;
+        margin: auto;
+
+        @include mq-min($screen-sm) {}
+
+        h2.column-title {
+          font-size: 4rem;
+
+          &:after {
+            content: "";
+            border-bottom: 2px solid $c_light-beige;
+            display: block;
+            padding-bottom: 3rem;
+            width: 50px;
+          }
+        }
+      }
+    }
+
+    .text_left {
+      .image-content {
+        @include mq-min($screen-sm) {
+          padding: 0 0 9rem 1rem;
+        }
+      }
+    }
+
+    .text_right {
+      .image-content {
+        @include mq-min($screen-sm) {
+          padding: 0 1rem 9rem 0;
+        }
+      }
+    }
+  }
+
+  /* ============================================================
+  blockquote
+  ============================================================ */
+  .section-quote {
+    background-color: $c_tertiary;
+  }
+
+  /* ============================================================
+  instructors
+  ============================================================ */
+  .instructors__group-wrapper {
+    display: none;
+  }
+}

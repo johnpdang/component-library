@@ -1,0 +1,161 @@
+.page-id-161 {
+  .hero {
+    margin-bottom: 0;
+    @include mq-min($screen-md) {
+      max-height: 1090px;
+    }
+    &-background__image {
+      transform: none;
+      margin-top: -7.7rem;
+      width: 100%;
+    }
+    &-content {
+      h1.page-header {
+        color: $c_white;
+        font-size: 14rem;
+        font-style: italic;
+        letter-spacing: 1.6px;
+        line-height: 0.8;
+        margin: 0;
+        padding-bottom: 0;
+      }
+    }
+    .scroll-to {
+      display: none;
+    }
+  }
+  // hide extra card modal/content
+  article {
+    .entry-content {
+      max-width: none;
+      margin: 0 auto;
+      h2,
+      p,
+      ul {
+        display: none;
+      }
+    }
+  }
+
+  .page-intro {
+    display: none;
+    p {
+      margin-bottom: 3.9rem;
+    }
+    &-shortcode__wrapper {
+      position: relative;
+      .card__grid {
+        max-width: 1550px;
+        margin: -14rem auto 10rem auto;
+        justify-content: center;
+        @include mq-min($screen-sm) {
+          margin-top: -15rem;
+        }
+        @include mq-min($screen-md) {
+          padding-left: 2rem;
+          padding-right: 2rem;
+          margin-top: -37rem;
+        }
+        @include mq-min($screen-lg) {
+          margin-top: -47rem;
+        }
+        @include mq-min($screen-xl) {
+          margin-top: -50rem;
+        }
+        .card__wrapper {
+          padding: 0;
+          margin-bottom: 10rem;
+          @include mq-min($screen-sm) {
+            padding: 0 3rem;
+          }
+          .card__header {
+            background-color: $c_primary;
+            border-radius: 1rem 1rem 0 0;
+            position: relative;
+            min-height: 235px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media all and (min-width: $screen-md) and (max-width: $screen-xl - 1){
+                min-height: 200px;
+            }
+
+            h6.card__title {
+              color: $c_white;
+              font-size: 4rem;
+              line-height: 1.1;
+              margin-bottom: 0;
+              width: 60%;
+              text-align: center;
+
+              @media all and (min-width: $screen-md) and (max-width: $screen-xl - 1){
+                  font-size: 3.1rem;
+              }
+
+              &:after {
+                content: "";
+                border-bottom: 1px solid $c_secondary;
+                display: block;
+                margin: 0 auto;
+                padding-top: 2rem;
+                width: 50px;
+              }
+            }
+            button.btn-plus-icon {
+              background-color: $c_black;
+              border-radius: 50%;
+              color: $c_primary_reverse;
+              height: 25px;
+              line-height: 1.2;
+              padding: 0;
+              position: absolute;
+              right: 15px;
+              top: 15px;
+              width: 25px;
+            }
+          }
+
+          .card__body {
+            -webkit-box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            border-radius: 1rem 1rem 1rem 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transform: translateY(-10px);
+            background-color: #fff;
+            min-height: 360px;
+            p.card__copy {
+              // color: $c_tertiary;
+              // font-weight: $fw_bold;
+              margin-bottom: 3rem;
+              text-align: center;
+              display: block;
+            }
+            h5.card__pricing {
+              font-size: 3.5rem;
+              margin-bottom: 5rem;
+              span.large-text {
+                font-size: 6rem;
+              }
+            }
+            a.card__btn {
+              max-width: 215px;
+              box-shadow: none;
+              width: 100%;
+              color: $c_white;
+              &:hover {
+                color: $c_white;
+                box-shadow: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

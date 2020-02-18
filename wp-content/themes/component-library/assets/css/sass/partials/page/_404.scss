@@ -1,0 +1,68 @@
+.error404 {
+  #page {
+    .wrap:first-of-type {
+      max-width: none;
+      padding: 0;
+    }
+  }
+  header.page-header {
+    background-color: $c_tertiary;
+    height: 120px;
+    margin-bottom: 6rem;
+    @include mq-min($screen-sm) {
+      height: 350px;
+    }
+    h1.page-title {
+      align-items: center;
+      color: $c_white;
+      display: flex;
+      font-size: 6rem;
+      height: 100%;
+      letter-spacing: 0;
+      margin: 0 auto;
+      max-width: 1102px + 36;
+      padding: 3rem;
+    }
+  }
+  .page-content {
+    padding: 3rem;
+    max-width: 1102px + 36;
+    margin: 0 auto 10rem auto;
+    h2 {
+      font-family: $font_secondary;
+      font-size: 20px;
+      padding-top: 1rem;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 3rem;
+    }
+    ul {
+      list-style: none;
+      margin-left: 0;
+      margin-bottom: 3rem;
+      li {
+        &:before {
+          content: "-";
+          display: inline-block;
+          margin-right: 10px;
+        }
+      }
+    }
+    a {
+      color: $c_tertiary;
+      text-decoration: none;
+      box-shadow: none;
+    }
+    form {
+      input.search-field {
+        padding-right: 5rem;
+      }
+      button.search-submit {
+        background: transparent;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.page-id-160 {
+  .hero {
+    margin-bottom: 0;
+    @include mq-min($screen-md) {
+      max-height: 1090px;
+    }
+    &-background__image {
+      transform: none;
+      max-width: none;
+      margin-top: -6.9rem;
+      width: 100vw;
+      @include mq-min($screen-md) {
+        margin-bottom: -5.7rem;
+        margin-top: -5.7rem;
+      }
+    }
+  }
+  .scroll-to {
+    display: none;
+  }
+  .page-intro {
+    padding: 0;
+    margin: 0 auto;
+    &-shortcode__wrapper {
+      max-width: 1310px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 3rem;
+      @include mq-min($screen-sm) {
+        padding: 6rem 9rem;
+      }
+      p:first-of-type {
+        font-weight: $fw_bold;
+        text-align: center;
+        margin-bottom: 3rem;
+        line-height: 1.5;
+        @include mq-min($screen-sm) {
+          margin-bottom: 6rem;
+        }
+      }
+    }
+  }
+  /* ==============================
+class ipa
+============================== */
+  #_mwcloudCTT {
+    iframe {
+      min-height: 55vh;
+    }
+  }
+}

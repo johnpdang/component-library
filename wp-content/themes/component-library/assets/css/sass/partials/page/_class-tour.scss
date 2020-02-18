@@ -1,0 +1,76 @@
+.class-template-default.postid-201 {
+  .hero {
+    background-color: $c_alt;
+  }
+
+  .intro__section-wrapper {
+    // intro paragraph
+    .page-intro {
+      span.first-letter,
+      span.first-letter-hidden {
+        color: $c_alt;
+      }
+    }
+
+    // sidebar
+    aside {
+      &.intro__sidebar {
+        a.btn {
+          &.item-arrow {
+            background-color: $c_alt;
+          }
+        }
+      }
+    }
+  }
+
+  /* ============================================================
+  classes
+  ============================================================ */
+  .class__group-wrapper {
+    .class__container {
+      .class__featured {
+        .class__featured-image {
+          &:after {
+            background-color: $c_alt;
+          }
+          img {
+            max-height: none;
+          }
+        }
+        h5.class__group-title {
+          &:after {
+            border: 1px solid $c_alt;
+          }
+        }
+      }
+      .class__card-container {
+        .class__card {
+          a {
+            &.item-arrow {
+              background-color: $c_alt;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* ============================================================
+  blockquote
+  ============================================================ */
+  .section-quote {
+    background-color: $c_alt;
+  }
+
+  /* ============================================================
+  instructors
+  ============================================================ */
+  .instructors__group-wrapper {
+    h5.instructors__group-title {
+      &:after {
+        border-bottom: 2px solid $c_alt;
+      }
+    }
+  }
+}

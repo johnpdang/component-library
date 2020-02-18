@@ -1,0 +1,112 @@
+section {
+  &.section-double-img {
+    .container__xl {
+      max-width: 100%;
+      padding: 0;
+      width: 100%;
+      .grid-container {
+        flex-basis: 100%;
+        flex-direction: column;
+        max-width: 100%;
+        padding: 0;
+        .image-content {
+          figure {
+            margin-bottom: -6rem;
+            @include mq-min($screen-sm) {
+              margin-bottom: -24rem;
+            }
+          }
+        }
+        .text-content {
+          align-items: flex-start;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 11rem;
+          margin: auto;
+          max-width: 1125px;
+          padding: 3rem;
+          @include mq-min($screen-md) {
+            padding: 0;
+            flex-direction: row;
+          }
+          @include mq-min($screen-xl) {
+            transform: translateX(-9.5rem);
+          }
+
+          .content__wrapper {
+            background-color: $c_white;
+            padding: 3rem;
+            z-index: 1;
+            @include mq-min($screen-md) {
+              flex: 2 1 844px;
+              padding: 7.6rem 11.4rem 16.5rem 11.4rem;
+            }
+
+            h6.eyebrow {
+              color: #bcbcbc;
+              font-size: 2rem;
+              margin-bottom: 1rem;
+              @include mq-min($screen-sm) {
+                margin-bottom: 3.8rem;
+              }
+            }
+            h2.column-title {
+              font-size: 4rem;
+              margin-bottom: 2.2rem;
+              &:after {
+                content: "";
+                border-bottom: 3px solid $c_light-beige;
+                display: block;
+                padding-bottom: 3rem;
+                width: 50px;
+              }
+            }
+            p {
+              line-height: 2.24;
+              margin-bottom: 3rem;
+              &:last-of-type {
+                margin-bottom: 3.7rem;
+              }
+            }
+            a.button {
+              box-shadow: none;
+              font-size: 2.2rem;
+              max-height: 68px;
+              max-width: 189px;
+              padding: 1.5rem;
+              text-align: center;
+              width: 100%;
+              &:hover {
+                color: $c_white;
+              }
+            }
+          }
+
+          .image__fg {
+            margin: 0;
+            display: none;
+            @include mq-min($screen-sm) {
+              display: block;
+            }
+            @include mq-min($screen-md) {
+              flex: 1 1 390px;
+              padding-top: 24rem;
+            }
+          }
+        }
+      }
+      .text_right {
+        .text-content {
+          flex-direction: column;
+          @include mq-min($screen-md) {
+            flex-direction: row-reverse;
+          }
+          @include mq-min($screen-xl) {
+            flex-direction: row-reverse;
+            transform: translateX(9rem);
+          }
+        }
+      }
+    }
+  }
+}

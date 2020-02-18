@@ -1,0 +1,173 @@
+.page-id-164 {
+  /* ==============================
+  hero
+  ============================== */
+  .hero {
+    background-color: $c_darkorange;
+    @include mq-min($screen-sm) {
+      max-height: 980px;
+    }
+    &-background__image {
+      max-width: 835px;
+    }
+    &-content__wrapper {
+      // top: 49rem;
+      // top:42vh;
+    }
+  }
+
+  .page-intro {
+    padding-top: 3rem;
+    padding-bottom: 0;
+    max-width: 950px;
+    @include mq-min($screen-sm) {
+      padding-top: 17rem;
+    }
+    span.first-letter {
+      color: $c_darkorange;
+    }
+  }
+
+  .section-info {
+    .container {
+      @include mq-min($screen-sm) {
+        max-width: 1360px;
+      }
+    }
+    .text_right,
+    .text_left {
+      .text-content {
+        margin: auto;
+        @include mq-min($screen-sm) {
+          max-width: 512px;
+          padding: 3rem;
+        }
+        .eyebrow {
+          color: $c_beige;
+          font-size: 20px;
+          margin-bottom: 35px;
+        }
+        .column-title {
+          font-size: 4rem;
+          &:after {
+            content: "";
+            border-bottom: 2px solid $c_light-beige;
+            display: block;
+            padding-bottom: 3rem;
+            width: 50px;
+          }
+          @include mq-min($screen-md) {
+            margin-bottom: 30px;
+          }
+        }
+        p {
+          line-height: 2.2;
+        }
+      }
+    }
+    /* ==============================
+    mobile
+    ============================== */
+    &.mobile-image {
+      display: block;
+      margin-bottom: -3.5rem;
+      @include mq-min($screen-md) {
+        display: none;
+      }
+      .container__xl {
+        max-width: none;
+        padding: 0;
+        width: 100%;
+        .text_left {
+          width: 100%;
+        }
+        .text-content {
+          display: none;
+        }
+      }
+    }
+    &.section-2col-fullwidth {
+      margin-bottom: 3rem;
+      @include mq-min($screen-md) {
+        margin-bottom: 22rem;
+      }
+      .container__xl {
+        max-width: none;
+        padding: 0;
+        width: 100%;
+        @include mq-min($screen-md) {
+          width: 93%;
+        }
+      }
+      .row {
+        // flex-direction: column;
+        .text_right,
+        .text_left {
+          position: relative;
+          width: 100%;
+          margin: auto 3rem;
+          @include mq-min($screen-md) {
+            margin: auto;
+            width: 50%;
+          }
+          .text-content {
+            z-index: 1;
+            max-width: none;
+            padding: 5rem 3rem 3rem 3rem;
+            @include mq-min($screen-md) {
+              position: absolute;
+              min-height: 500px;
+              width: 85%;
+              padding: 8rem;
+            }
+            @include mq-min($screen-xl) {
+              min-height: 455px;
+            }
+            @include mq-min($screen-xxl) {
+              min-height: 405px;
+            }
+            h2.column-title {
+              color: $c_white;
+              margin-bottom: 2rem;
+            }
+            p {
+              color: $c_white;
+              @include mq-min($screen-md) {
+                font-size: 1.8rem;
+              }
+              @include mq-min($screen-lg) {
+                font-size: 2.2rem;
+              }
+            }
+          }
+          .image-content {
+            display: none;
+            @include mq-min($screen-md) {
+              display: block;
+              flex-basis: 100%;
+              max-width: 100%;
+            }
+          }
+        }
+        .text_right {
+          .text-content {
+            right: 0;
+            bottom: 0;
+            background-color: $c_tertiary;
+          }
+        }
+        .text_left {
+          .text-content {
+            left: 0;
+            bottom: 0;
+            background-color: $c_primary;
+          }
+        }
+      }
+    }
+  }
+
+  .section-quote {
+    display: none;
+  }
+}

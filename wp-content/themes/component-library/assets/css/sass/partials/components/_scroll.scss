@@ -1,0 +1,69 @@
+//scroll button
+.page,
+.single {
+  .scroll-to {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+
+    @include mq-min($screen-lg) {
+      display: block;
+    }
+
+    .scroll-to_button {
+      width: 86px;
+      height: 86px;
+      background-color: $c_gray-dark;
+      border-radius: 0;
+      padding: 0;
+      margin: 0;
+    }
+
+    .scroll-to_arrow {
+      svg {
+        // transform: rotate(90deg);
+        &:hover {
+          @include slideDown(0.75s);
+        }
+      }
+    }
+  }
+}
+
+.home {
+  .scroll-to {
+    @include mq-min($screen-sm) {
+      -webkit-transition:bottom .4s ease-in-out;
+      transition:bottom .4s ease-in-out;
+      display:block;
+
+      .scroll-to_arrow {
+        &:before {
+          content: "SCROLL DOWN";
+          display: block;
+          font-size: 10px;
+          color: $c_primary;
+          margin: -6.2rem 0 0 0;
+          padding-bottom: 1rem;
+        }
+        svg {
+
+        }
+      }
+    }
+  }
+
+  &.sticky-footer-active .scroll-to {
+    bottom:50px;
+
+    @media all and (min-height:1132px) {
+      bottom:0;
+    }
+
+    html:not(.scroll-lock) & {
+      bottom:0;
+    }
+  }
+}

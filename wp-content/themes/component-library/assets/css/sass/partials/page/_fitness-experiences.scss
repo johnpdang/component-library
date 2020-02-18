@@ -1,0 +1,342 @@
+.page-id-165 {
+  /* ============================================================
+  hero
+  ============================================================ */
+  .hero {
+    background-color: $c_darkorange;
+    @include mq-min($screen-sm) {
+      max-height: 980px;
+    }
+  }
+  .hero-background__image {
+    max-width: 830px;
+  }
+  /* ============================================================
+  page intro
+  ============================================================ */
+  .page-intro {
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    @include mq-min($screen-sm) {
+      padding-bottom: 0;
+      padding-top: 8rem;
+      max-width: 924px;
+    }
+    p {
+      span.first-letter {
+        color: $c_darkorange;
+      }
+    }
+  }
+  /* ============================================================
+  section info blocks
+  ============================================================ */
+  .section-info {
+    .container.container__xl {
+      max-width: 1510px;
+      padding-bottom: 6rem;
+    }
+    .text_left {
+      justify-content: normal;
+      align-items: normal;
+    }
+    .grid-container {
+      padding-left: 0;
+      padding-right: 0;
+      .image__wrapper.image__fg {
+        display: flex;
+        align-items: center;
+        height: 100px;
+      }
+      a.svg-url {
+        background-color: $c_tertiary;
+        display: flex;
+        height: 33px;
+        width: 33px;
+        svg {
+          margin: auto;
+          &:hover {
+            @include slideOff(0.5s);
+          }
+        }
+      }
+    }
+    /* ============================================================
+    section-staggered
+    ============================================================ */
+    &.section-staggered {
+      margin-bottom: 9rem;
+      @include mq-min($screen-sm) {
+        margin-bottom: 0;
+      }
+      .container__xl {
+        max-width: none;
+        padding: 0;
+        margin-bottom: 3rem;
+        width: 100%;
+        @include mq-min($screen-sm) {
+          margin: 0 0 14rem 0;
+        }
+      }
+      .text_left {
+        background-color: $c_secondary_reverse;
+        width: 100%;
+        .text-content {
+          padding: 5rem 3rem 3rem 3rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin: auto;
+          max-width: 660px;
+          @include mq-min($screen-sm) {
+            padding: 3rem;
+          }
+          h2 {
+            font-size: 4rem;
+            @include mq-min($screen-sm) {
+              margin-bottom: 4rem;
+              padding-right: 21%;
+            }
+            &:after {
+              content: "";
+              display: block;
+              border-bottom: 2px solid $c_primary_reverse;
+              width: 50px;
+              padding-top: 4rem;
+            }
+          }
+          ul {
+            list-style-type: disc;
+            li {
+              margin-bottom: 2.5rem;
+            }
+          }
+        }
+        .image-content {
+          figure {
+            img {
+              object-fit: cover;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+    /* ============================================================
+    4 class cards
+    ============================================================ */
+    &.section-class {
+      .grid-container {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 6rem;
+        @include mq-min($screen-lg) {
+          &:nth-child(1) {
+            padding: 0 3.5rem 11rem 2.5rem;
+          }
+          &:nth-child(2) {
+            padding: 0 2.25rem 11rem 3.5rem;
+          }
+          &:nth-child(3) {
+            padding: 0 3.5rem 8rem 2.5rem;
+          }
+          &:nth-child(4) {
+            padding: 0 2.5rem 8rem 34px;
+          }
+          &:nth-child(5) {
+            padding: 0 3.5rem 8.5rem 2.5rem;
+          }
+          &:nth-child(6) {
+            padding: 0 2.5rem 8.5rem 3.5rem;
+          }
+        }
+        .grid-item {
+          &.text-content {
+            padding: 0;
+            @include mq-min($screen-sm) {
+              padding: 0rem 3rem;
+            }
+            &:before {
+              content: "";
+              display: block;
+              border-bottom: 2px solid $c_primary_reverse;
+              width: 50px;
+            }
+            .eyebrow {
+              font-size: 40px;
+            }
+            h2.column-title {
+              font-size: 2.6rem;
+              position: relative;
+            }
+            p.column-content {
+              width: 100%;
+            }
+          }
+          &.image-content {
+          }
+        }
+        figure {
+          &.image__bg {
+            height: auto;
+          }
+          &.image__fg {
+            margin-bottom: 4.75rem;
+            margin-top: 0;
+            width: 100%;
+            img {
+              width: initial;
+            }
+          }
+        }
+
+        &:first-of-type {
+          // yellow calm
+          .grid-item.text-content {
+            h2.column-title:before {
+              background-color: $c_secondary;
+            }
+          }
+          figure.image__fg {
+            background-color: $c_accent;
+          }
+
+          figure.image__fg {
+            background-color: $c_accent;
+
+            img {
+              padding: 0rem 3rem 1rem 3rem;
+            }
+          }
+        }
+
+        &:nth-of-type(2) {
+          //orange surge
+          .grid-item.text-content {
+            h2.column-title:before {
+              background-color: $c_accent;
+            }
+          }
+          figure.image__fg {
+            background-color: $c_secondary;
+            img {
+              padding: 4px 3rem 1rem 3rem;
+            }
+          }
+        }
+
+        &:nth-of-type(3) {
+          //orange-red tribe
+          .grid-item.text-content {
+            h2.column-title:before {
+              background-color: $c_alt;
+            }
+          }
+          figure.image__fg {
+            background-color: $c_element;
+            img {
+              padding: 0 2rem 16px 3rem;
+            }
+          }
+          .svg-content {
+            padding: 9px 0 0 0;
+          }
+        }
+        &:nth-of-type(4) {
+          //red tour
+
+          .grid-item.text-content {
+            h2.column-title:before {
+              background-color: $c_element;
+            }
+          }
+          figure.image__fg {
+            background-color: $c_alt;
+            img {
+              padding: 1rem 2rem 15px 30px;
+            }
+          }
+          .svg-content {
+            padding: 9px 0 0 0;
+          }
+        }
+        &:nth-of-type(5),
+        &:nth-of-type(6) {
+          //personal training, cardio & weight training
+          .grid-item.image-content {
+            a {
+              &:hover {
+                text-decoration: none;
+                box-shadow: none;
+                color: green;
+                border: none;
+              }
+            }
+            figure {
+              &.image__fg {
+                background-color: $c_lightgray;
+                height: 100px;
+                padding: 25px 30px;
+                font-style: italic;
+                color: $c_tertiary;
+                @include mq-min($screen-sm) {
+                  margin-bottom: 6rem;
+                }
+                &:before {
+                  content: "";
+                  color: $c_tertiary;
+                  display: inline-block;
+                  font-family: $font_primary;
+                  font-size: 4rem;
+                  font-style: italic;
+                  font-weight: $fw_bold;
+                }
+                img {
+                  display: none;
+                }
+              }
+            }
+          }
+          .grid-item.text-content {
+            padding: 0;
+            @include mq-min($screen-sm) {
+              padding: 0rem 3rem;
+            }
+          }
+          .svg-content {
+            padding: 15px 0 1rem 0;
+          }
+        }
+        &:nth-of-type(5) {
+          .grid-item.image-content {
+            figure {
+              &.image__fg {
+                &:before {
+                  content: "Personal Training";
+                }
+              }
+            }
+          }
+        }
+        &:nth-of-type(6) {
+          .grid-item.image-content {
+            figure {
+              &.image__fg {
+                &:before {
+                  content: "Cardio & Weight Training";
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.section-quote {
+      display: none;
+    }
+  }
+  // Hidden for development purposes
+  .page-intro-shortcode__wrapper {
+    display: none;
+  }
+}
