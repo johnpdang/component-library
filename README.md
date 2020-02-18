@@ -1,6 +1,6 @@
-# BUCK Institute
+# Component Library
 
-Component Library repository
+Component library repository
 
 ## Getting Started
 
@@ -50,6 +50,6 @@ John Dang
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://opensource.org/licenses/MIT) file for details
 
 ## Acknowledgments
